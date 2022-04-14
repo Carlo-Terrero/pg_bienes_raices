@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- leng="es" es el atributo del idioma del texto de la pagina. -->
+<!-- en JS los comentarios son asi // de una linea o /*aqui comentas*/
+                    si son de varias lineas-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bienes Raices </title>
+    <link rel="stylesheet" href="css/normaliza.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="index.html.html">
+                    <img src="img/logo.svg" alt="Logotipo de Bienes Raices">
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="Imagen Principal">
+
+    <main class="contenedor seccion contenido-centrado">
+        <h2 class="fw-300 centrar-texto">Llena el formulario de Contacto</h2>
+
+        <!-- Esta etiqueta es para formularios. Con esta etiqueta puedes leer con Java o JS mas facilmente. -->
+        <form class="contacto" action="">
+            <fieldset>
+                <!--Para agrupar campos relacionados-->
+
+                <legend>Informacion Personal</legend>
+                <!--Para indicar al usuario de tratan estos campos -->
+
+                <!-- Con este campo pones la etiqueta del campo que se va a llenar-->
+                <!-- Con el for del label indicamos a elemento pertenece con un Id. Mira el ejemplo en las etiquetas-->
+                <label for="nombre">Nombre: </label>
+                <!-- En este campo es donde el usuario va a escribir el texto (Solo texto) -->
+                <!-- placeholder: Con este atributo ponemos un texto que se va cuando hacemos click en el campo a rellenar.-->
+                <input type="text" id="nombre" placeholder="Inserte nombre">
+
+                <label for="email">E-mail: </label>
+                <!-- En este caso cambiamos el type"text" por el "email" para procesarlo mejor-->
+                <!-- required: Con este atributo obligamos a que introduzca el email correctamente-->
+                <input type="email" id="email" placeholder="Correo electronico" required>
+
+                <label for="telefono">Teléfono: </label>
+                <!-- Otra vez cambiamos el tipo-->
+                <input type="tel" id="telefono" placeholder="Inserte teléfono" required>
+
+                <label for="mensaje">Mensaje: </label>
+                <!--El name: Es la forma en la que vamos a leer en el backend lo que el usuario inserto-->
+                <textarea name="" id="mensaje"></textarea>
+                <!-- Con el type "submit" agregamos el boton enviar-->
+            </fieldset>
+
+            <fieldset>
+                <legend>Información sobre la Propiedad</legend>
+                <label for="opciones">Vende o Compra: </label>
+                <!-- El select es el desplegable y dentro sus opciones-->
+                <select id="opciones">
+                    <!--Con el disabled se desabilita esta opcion y con selected se pone por defecto-->
+                    <option value="" disabled selected>-- Selecione --</option>
+                    <!--El value es para que lo lea el lenguaje de backend.
+                    en otros elementos es el name -->
+                    <option value="">Comprar</option>
+                    <option value="">Vender</option>
+                </select>
+
+                <label for="Cantidad">Cantidad:</label>
+                <input type="number" min="0" id="Cantidad">
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+
+                <p>Como desea se contactado:</p>
+
+                <div class="forma-contacto">
+                    <label for="telefono">Teléfono: </label>
+                    <!--type "radio" son radiobutom y con el name los 
+                    agrupamos para que solo se selecione 1 del grupo-->
+                    <!--El value es para que lo lea el lenguaje de backend,
+                    en otros elementos es el name-->
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
+
+                    <label for="correo">E-mail: </label>
+                    <input type="radio" name="contacto" value="correo" id="correo">
+                </div>
+
+                <p>Si eligió telefono, elija la fecha y la hora</p>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+
+                <label for="hora">Hora:</label>
+                <!--Marcamos el rango min. y max.de la hora
+                que es mejor validar en JS para que tenga mas soporte -->
+                <input type="time" id="hora" min="09:00" max="18:00">
+
+            </fieldset>
+
+            <!--El boton ya me aperece como enviar de por si, pero le ponemos
+            con value, enviar por si acaso-->
+            <input type="submit" value="Enviar" class="boton boton-verde">
+
+        </form>
+    </main>
+
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los Derechos Reservados 2019</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+</script>
+
+</html>
